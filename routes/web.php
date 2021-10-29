@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// use Illuminate\Routing\Route;
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+// Route::get('/about', function () {
+//     $nama = 'Lingga';
+//     return view('about', ['nama' => $nama]);
+// });
+
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/mahasiswa', 'MahasiswaController@index');
